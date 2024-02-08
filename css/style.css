@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.score {
+    width: 100%;
+	font-size: 29px;
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.game-container{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    position: relative;
+    padding: 0 20px;
+
+    z-index: 99;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+
+    background-image: url(../img/paper-3.jpg);
+    background-size: 100vw;
+    background-position: initial;
+}
+
+#tommaso{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-family: 'Rubik Doodle Shadow', system-ui, sans-serif;
+    font-size: 50px;
+}
+
+.game-board{
+    position: relative;
+
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cell{
+    width: calc(113px - 20px);
+    height: calc(113px - 20px);
+}
+
+.cell-81{
+    width: calc(92px - 20px);
+    height: calc(92px - 20px);
+}
+
+.cell-100{
+    width: calc(85px - 20px);
+    height: calc(85px - 20px);
+}
+
+/* CSS */
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cell-clicked{
+	background-color: rgb(85, 188, 193);
+}
+
+.cell-bomb {
+	background-color: rgb(241, 117, 78);
+	background-image: url('../img/bomb_preview_rev_1.png');
+	background-size: cover;
+}
+
+.cell-clicked,
+.cell-bomb {
+	cursor: not-allowed;
+}
+
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* Schermata di fine gioco */
+.end-game-screen {
+	background-color: rgba(241, 117, 78, 0.6);
+	position: absolute;
+    width: 650px;
+    height: 650px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.win {
+	background-color: rgba(78, 241, 187, 0.6);
+}
+
+.end-game-text {
+	font-size: 48px;
+	line-height: 1.2;
+	margin-bottom: 16px;
+}
+
+.hidden {
+	display: none;
+}
